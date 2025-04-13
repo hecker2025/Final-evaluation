@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARDOM-A LAW FIRM</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3; /* Light background */
+            color: #333;
+        }
+        header {
+            background-color: #FF6F20; /* Deep Orange */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex; /* Use Flexbox for layout */
+            justify-content: space-between; /* Spread items across the row */
+            margin: 10px 20%; /* Add some margin to the sides */
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFC107; /* Amber */
+        }
+        .hero {
+            background: url('https://pngmagic.com/product_images/solid-dark-orange-background.jpg') no-repeat center center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .events, .workshops {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .event, .workshop {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .event:hover, .workshop:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .event img, .workshop img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .event h2, .workshop h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .event p, .workshop p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .slider {
+            position: relative;
+            max-width: 1400px; /* Set a max width for the slider */
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .slides {
+            display: flex; /* Use flexbox for horizontal layout */
+            transition: transform 1s ease; /* Smooth transition */
+        }
+        .slide {
+            min-width: 100%; /* Each slide takes full width */
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%; /* Make images responsive */
+            border-radius: 10px;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #FF6F20; /* Deep Orange */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BARDOM- A LAWYER MANAGEMENT PORTAL</h1>
+    <nav>
+
+            <a href="#about">About us</a> 
+            <a href="lawyers">Lawyers</a>                
+            <a href="careers">Careers</a>  
+            <a href="payments">Book Appointment</a> 
+    </nav>
+
+</header>
+
+
+
+<div class="slider">
+    <div class="slides">
+
+        <div class="slide">
+            <img src="https://i0.wp.com/thebasicstructureconlaw.wordpress.com/wp-content/uploads/2020/10/1573657162supreme-court-of-india.jpeg?resize=1400%2C831&ssl=1" alt="Supreme Court of India" style="width: 100%; max-height: 420px;">
+        </div>
+        <div class="slide">
+            <img src="https://wallpapers.com/images/hd/lady-justice-gray-background-altdvzukhkwc6qst.jpg" alt="Lawyers" style="width: 100%; max-height: 420px;">
+        </div>
+        
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<section id="events" class="events">
+    <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">OUR MOTTO</h2>
+    <div class="event">
+        <img src="https://www.shutterstock.com/shutterstock/videos/1046223907/thumb/7.jpg?ip=x480" alt="pic">
+        <h2>LAWYER ENGAGEMENT</h2>
+        <p>BRINGING TOP LAW PROFESSIONALS ON A SINGLE PLATFORM</p>
+        <p>LAW SUITS EVERYONE- NOW YOU CAN ACCESS INDIA'S TOP LAW PROFESSIONALS EASILY ON A SINGLE PLATFORM</p>
+    </div>
+    <div class="event">
+        <img src="https://t3.ftcdn.net/jpg/03/54/26/10/360_F_354261018_RD5YEbufu7Yjck3SNiRC6yfJLZoxIegZ.jpg" alt="pic">
+        <h2>LEGAL ADVICES AT DISCOUNTED RATES </h2>
+        <p>NO NEED OF SPENDING MONEY LIKE NOTHING WHILE CHASING BIG NAMES </p>
+        <p>NOW ITS ALL IN YOUR HANDS- YOU GET TO CHOOSE, YOUR LAWYER AS WELL AS YOUR FEES</p>
+    </div>
+    <div class="event">
+        <img src="https://images.stockcake.com/public/3/e/6/3e695bbd-8fde-4b68-b40f-63738705a47d_large/joyful-legal-victory-stockcake.jpg" alt="pic">
+        <h2>LEGAL BLOOM TO YOUNG LAWYERS</h2>
+        <p>WHERE YOUNG LAWYERS FIND PURPOSE AND POSITIONS</p>
+        <p>START YOUR CAREER WITH VERIFIED & QUALITY JOB LISTINGS</p>
+    </div>
+</section>
+
+<section id="workshops" class="workshops">
+    <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">FEATURES</h2>
+    <div class="workshop">
+        <img src="https://media.istockphoto.com/id/104821144/photo/serious-lawyers-holding-files-in-lobby.jpg?s=612x612&w=0&k=20&c=TOgTBNQ7hF5zrw0zIcx9v-0cbbTvTXUAeiPuWuPBL7E=" alt="pic">
+        <h2>SMART LAWYER DISCOVERY</h2>
+        <p>FIND VERIFIED LAWYERS BASED ON YOUR NEEDS</p>
+    </div>
+    <div class="workshop">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStMmcxFLocDRfFVUEw46RICRTwYIeGVnLNtw&s" alt="pic">
+        <h2>SEAMLESS APPOINTMENT BOOKING</h2>
+        <p>SCHEDULE LEGAL CONSULTATIONS WITH JUST A CLICK</p>
+    </div>
+    <div class="workshop">
+        <img src="https://upes-production-cvb3e7frghdda0a4.z01.azurefd.net/drupal-data/2024-09/Career-Options-After-LLB--What-Can-You-Do-with-a-Law-Degree.webp" alt="pic">
+        <h2>CAREER BOOST HUB</h2>
+        <p>CONNECTS YOUNG LAWYERS TO HIRING OPPORTUNITIES EASILY</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 BARDOM. All Rights Reserved.</p>
+</footer>
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        // Wrap around if the index is out of bounds
+        if (index >= totalSlides) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = totalSlides - 1;
+        } else {
+            currentSlide = index;
+        }
+
+        // Move the slides container to show the current slide
+        slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    // Automatically change slides every 5 seconds
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+
+    // Show the first slide initially
+    showSlide(currentSlide);
+</script>
+
+
+</body>
+</html>
